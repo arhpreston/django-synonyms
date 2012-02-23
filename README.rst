@@ -36,10 +36,6 @@ Usage
 
 3. Your admin layout could be extended with::
 
-    journal = Journal.objects.get(name='prb')
-
-3. Your admin layout could be extended with::
-
     from synonyms.admin import SynonymInline
 
     class JournalAdmin(admin.ModelAdmin):
