@@ -1,0 +1,15 @@
+## General ignores
+*~
+*#*#
+.#*
+*.pyc
+*.db
+*.svn*
+.DS_Store
+.svn/
+.ponyrc
+.emacs*
+
+## Django-specific ignores
+# Symlink to the _local_ django.contrib.admin.media folder
+static/admin
