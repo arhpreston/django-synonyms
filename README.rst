@@ -12,30 +12,25 @@ referred to as 'Phys Rev B' or 'prb'.
 Installation
 ------------
 
-1. Update your settings file:
-
+1. Update your settings file::
     INSTALLED_APPS += ('synonyms',)
 
-2. Sync the databse
-
+2. Sync the databse::
     $ python manage.py syncdb    
 
 Usage
 -----
 
-1. Your model might looks something like:
-
+1. Your model might looks something like::
     class Journal(models.Model):
         objects = SynonymManager(target_field='name')
 	name = models.CharField(max_length=100)
 	...
 
-2. Your view would then contain the following code:
-
+2. Your view would then contain the following code::
     journal = Journal.objects.get(name='prb')
 
-3. Your admin layout could be extended with:
-
+3. Your admin layout could be extended with::
     from synonyms.admin import SynonymInline
 
     class JournalAdmin(admin.ModelAdmin):
